@@ -93,7 +93,7 @@ to any cluster running a Kubernetes version higher or equal to v1.27.2.
 Then we post this ClusterProfile which deployes Nginx Helm chart in any cluster matching __ clusterSelector: version=v1-27-2__
 
 ```
-kubectl apply -f https://raw.githubusercontent.com/gianlucam76/sveltos_workshop/main/cluster_classification/classifier.yaml
+kubectl apply -f https://raw.githubusercontent.com/gianlucam76/sveltos_workshop/main/cluster_classification/clusterprofile.yaml
 ```
 
 Using sveltosctl again we can verify deployed add-ons:
