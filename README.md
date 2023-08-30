@@ -37,7 +37,7 @@ It consists in:
 
 In this demo both clusterAPI Cluster instance and the SveltosCluster instance have label: "env:fv"
 
-![Sveltos add-on deployment](https://projectsveltos.github.io/sveltos/assets/addons_deployment.gif)
+![Sveltos add-on deployment](https://github.com/projectsveltos/sveltos/blob/main/docs/assets/addons_deployment.gif)
 
 1. Create a ConfigMap in the management cluster containing a Kyverno ClusterPolicy preventing 
 ```
@@ -66,6 +66,8 @@ kubectl exec -it -n projectsveltos sveltosctl-0 -- ./sveltosctl show addons
 ```
 
 ## Deploy add-ons based on cluster Kubernetes version
+
+![Sveltos add-on deployment](https://github.com/projectsveltos/sveltos/blob/main/docs/assets/classifier.gif)
 
 Sveltos can classifiy clusters based on their run-time state and deploy add-ons based on that information.
 
@@ -121,14 +123,16 @@ ClusterProfile order
 
 There are two ways to do this:
 
-Using the helmCharts field in a ClusterProfile: The helmCharts field allows you to specify a list of Helm charts that need to be deployed. Sveltos will deploy the Helm charts in the order that they are listed in this field.
-Using the policyRefs field in a ClusterProfile: The policyRefs field allows you to reference a list of ConfigMap and Secret resources whose contents need to be deployed. Sveltos will deploy the resources in the order that they are listed in this field.
+- Using the helmCharts field in a ClusterProfile: The helmCharts field allows you to specify a list of Helm charts that need to be deployed. Sveltos will deploy the Helm charts in the order that they are listed in this field.
+- Using the policyRefs field in a ClusterProfile: The policyRefs field allows you to reference a list of ConfigMap and Secret resources whose contents need to be deployed. Sveltos will deploy the resources in the order that they are listed in this field.
 
 Here for instance Sveltos will first deploy Prometheus Helm chart only after it will deploy the Grafana Helm chart.
 
+![Sveltos: Resource Deployment Order](https://github.com/projectsveltos/sveltos/blob/main/docs/assets/helm_chart_order.gif)
+
 Some other time it is necessary to wait for resources to be in a certain state before other resources are deployed.
 
-![Sveltos: Resource Deployment Order](https://projectsveltos.github.io/sveltos/assets/sveltos_resource_order.gif)
+![Sveltos: Resource Deployment Order](https://github.com/projectsveltos/sveltos/raw/main/docs/assets/sveltos_resource_order.gif)
 
 This prepares ConfigMap containing:
 1. PostgreSQL deployment and service
