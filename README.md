@@ -163,7 +163,7 @@ Then we ask Sveltos to deploy those resources in order
 kubectl apply -f https://raw.githubusercontent.com/gianlucam76/sveltos_workshop/main/events/deploy_todo_app.yaml
 kubectl apply -f https://raw.githubusercontent.com/gianlucam76/sveltos_workshop/main/events/create_table_job.yaml
 kubectl apply -f https://raw.githubusercontent.com/gianlucam76/sveltos_workshop/main/events/add_entry.yaml
-kubectl apply -f https://raw.githubusercontent.com/gianlucam76/sveltos_workshop/main/events/helm_order.yaml
+kubectl apply -f https://raw.githubusercontent.com/gianlucam76/sveltos_workshop/main/events/postgresql.yaml
 ```
 
 ```bash
