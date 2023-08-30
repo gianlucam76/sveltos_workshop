@@ -128,6 +128,10 @@ There are two ways to do this:
 
 Here for instance Sveltos will first deploy Prometheus Helm chart only after it will deploy the Grafana Helm chart.
 
+```
+kubectl apply -f https://raw.githubusercontent.com/gianlucam76/sveltos_workshop/main/events/helm_order.yaml
+```
+
 ![Sveltos: Resource Deployment Order](https://github.com/projectsveltos/sveltos/blob/main/docs/assets/helm_chart_order.gif)
 
 Some other time it is necessary to wait for resources to be in a certain state before other resources are deployed.
